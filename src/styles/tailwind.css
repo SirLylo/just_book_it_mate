@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #fafbfc; /* warm white */
+    --color-foreground: #1f2937; /* near-black */
+    --color-border: #e5e7eb; /* light gray */
+    --color-input: #ffffff; /* pure white */
+    --color-ring: #103948; /* deep teal */
+    
+    /* Card Colors */
+    --color-card: #ffffff; /* pure white */
+    --color-card-foreground: #1f2937; /* near-black */
+    
+    /* Popover Colors */
+    --color-popover: #ffffff; /* pure white */
+    --color-popover-foreground: #1f2937; /* near-black */
+    
+    /* Muted Colors */
+    --color-muted: #f9fafb; /* gray-50 */
+    --color-muted-foreground: #6b7280; /* medium gray */
+    
+    /* Primary Colors */
+    --color-primary: #103948; /* deep teal */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #9ad9ee; /* light blue */
+    --color-secondary-foreground: #1f2937; /* near-black */
+    
+    /* Accent Colors */
+    --color-accent: #2dd4bf; /* vibrant teal */
+    --color-accent-foreground: #ffffff; /* white */
+    
+    /* Success Colors */
+    --color-success: #10b981; /* professional green */
+    --color-success-foreground: #ffffff; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #f59e0b; /* amber */
+    --color-warning-foreground: #ffffff; /* white */
+    
+    /* Error/Destructive Colors */
+    --color-error: #ef4444; /* clear red */
+    --color-error-foreground: #ffffff; /* white */
+    --color-destructive: #ef4444; /* clear red */
+    --color-destructive-foreground: #ffffff; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism utilities */
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/10 border border-white/20;
+  }
+  
+  .glass-surface {
+    @apply backdrop-blur-md bg-white/80 border border-white/30;
+  }
+  
+  /* Shadow utilities following three-tier elevation system */
+  .shadow-subtle {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-moderate {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-floating {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animation utilities */
+  .transition-micro {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .transition-page {
+    @apply transition-all duration-300 ease-in-out;
+  }
+.transition-loading  {
+    @apply transition-all duration-150;
+  }
+}
