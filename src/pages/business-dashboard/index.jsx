@@ -11,7 +11,8 @@ import RevenueChart from './components/RevenueChart';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/AppIcon';
 import { supabase } from '../../lib/supabase';
-import { useAuth } from '../../hooks/useAuth';
+import useAuth from '../../hooks/useAuth';
+
 
 const BusinessDashboard = () => {
   const navigate = useNavigate();
